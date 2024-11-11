@@ -119,27 +119,21 @@ public class AStaralgorithm {
                     queue.add(neighbor);
                     distances.put(neighbor, distances.get(node) + 1);
                     if (neighbor == end) {
-                        return distances.get(neighbor); // Found the shortest distance
+                        return distances.get(neighbor);
                     }
                 }
             }
         }
-        return -1; // No path found
+        return -1;
     }
 
-    // A* algorithm implementation
     private static int aStar(int start, int goal) {
-        // Priority queue for the open set, sorted by the cost
         PriorityQueue<Node> openSet = new PriorityQueue<>(Comparator.comparingInt(node -> node.fScore));
-        // Set of nodes already evaluated
         Set<Integer> closedSet = new HashSet<>();
 
-        // Distance from start to node
         Map<Integer, Integer> gScore = new HashMap<>();
-        // Estimated total cost from start to goal through node
         Map<Integer, Integer> fScore = new HashMap<>();
 
-        // Initialize start node
         gScore.put(start, 0);
         fScore.put(start, heuristic(start, goal));
 
@@ -148,7 +142,6 @@ public class AStaralgorithm {
         while (!openSet.isEmpty()) {
             Node current = openSet.poll();
 
-            // If we reached the goal
             if (current.id == goal) {
                 return gScore.get(current.id);
             }
@@ -157,30 +150,23 @@ public class AStaralgorithm {
 
             for (int neighbor : graph.getOrDefault(current.id, Collections.emptyList())) {
                 if (closedSet.contains(neighbor)) {
-                    continue; // Ignore already evaluated nodes
+                    continue;
                 }
 
                 int tentativeGScore = gScore.getOrDefault(current.id, Integer.MAX_VALUE) + 1; // Distance is 1 for each edge
 
                 if (tentativeGScore < gScore.getOrDefault(neighbor, Integer.MAX_VALUE)) {
-                    // This path to neighbor is better
                     gScore.put(neighbor, tentativeGScore);
                     fScore.put(neighbor, tentativeGScore + heuristic(neighbor, goal));
-
-                    // Add neighbor to the open set
                     openSet.add(new Node(neighbor, fScore.get(neighbor)));
                 }
             }
         }
-        return -1; // Return -1 if no path exists
+        return -1;
     }
-
-    // Heuristic function (zero heuristic for simplicity)
     private static int heuristic(int node, int goal) {
         return 0;
     }
-
-    // Helper class to represent nodes with their fScore for priority queue
     private static class Node {
         int id;
         int fScore;
