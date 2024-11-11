@@ -1,0 +1,78 @@
+# Nodes: 1,088,092
+# Edges: 3,083,796
+Format Description
+Each line in the dataset contains two integers, separated by a tab, representing a directed edge in the graph.
+This means that the edge has a starting (source) node and an ending #(destination) node, which creates a one-way link.
+
+FromNodeId: This integer is the ID of the starting node, indicating where the edge originates.
+ToNodeId: This integer is the ID of the destination node, indicating where the edge terminates.
+Directed Graph: Each edge is directional, meaning it represents a one-way path from FromNodeId to ToNodeId.
+Road Network Representation: Each node can be thought of as an intersection or location within Pennsylvania,
+and each edge represents a road or path connecting two nodes in a specific direction.
+Sparse Representation: The dataset only lists each edge once, so there are no
+duplicate edges between the same nodes in the same direction.
+
+Node 0 has a directed edge to Node 1.
+Node 0 has a directed edge to Node 6309.
+Node 0 has a directed edge to Node 6353.
+Node 1 has a directed edge to Node 0.
+Node 6353 has a directed edge to Node 0.
+Node 6353 has a directed edge to Node 6354.
+Node 6353 has a directed edge to Node 6364.
+Node 6353 has a directed edge to Node 6386.
+Node 6309 has a directed edge to Node 0.
+Node 6309 has a directed edge to Node 6310.
+Node 6309 has a directed edge to Node 6344.
+
+#This dataset is useful for graph-based algorithms and network analysis, such as shortest-path calculations,
+#connectivity checks, or finding isolated nodes within Pennsylvania's road network.
+
+Node 2 has a directed edge to Node 3.
+Node 2 has a directed edge to Node 4.
+Node 2 has a directed edge to Node 7.
+Node 3 has a directed edge to Node 2.
+Node 3 has a directed edge to Node 309.
+Node 4 has a directed edge to Node 2.
+Node 4 has a directed edge to Node 273.
+Node 4 has a directed edge to Node 274.
+Node 4 has a directed edge to Node 388.
+Node 7 has a directed edge to Node 2.
+Node 7 has a directed edge to Node 8.
+Node 7 has a directed edge to Node 1.
+Node 7 has a directed edge to Node 3998.
+Node 309 has a directed edge to Node 3.
+Node 309 has a directed edge to Node 6.
+Node 309 has a directed edge to Node 274.
+Node 309 has a directed edge to Node 1060390.
+Node 273 has a directed edge to Node 4.
+Node 273 has a directed edge to Node 3861.
+Node 273 has a directed edge to Node 3862.
+Node 273 has a directed edge to Node 3872.
+Node 274 has a directed edge to Node 4.
+Node 274 has a directed edge to Node 309.
+Node 274 has a directed edge to Node 3862.
+Node 274 has a directed edge to Node 1060215.
+Node 388 has a directed edge to Node 4.
+Node 388 has a directed edge to Node 389.
+Node 388 has a directed edge to Node 4005.
+Node 388 has a directed edge to Node 4006.
+Node 5 has a directed edge to Node 6.
+Node 5 has a directed edge to Node 8.
+Node 5 has a directed edge to Node 9.
+Node 6 has a directed edge to Node 5.
+Node 6 has a directed edge to Node 305.
+Node 6 has a directed edge to Node 309.
+Node 6 has a directed edge to Node 310.
+Node 6 has a directed edge to Node 1060307.
+Node 9 has a directed edge to Node 5.
+Node 9 has a directed edge to Node 12.
+Node 9 has a directed edge to Node 10464.
+Node 8 has a directed edge to Node 5.
+Node 8 has a directed edge to Node 7.
+Node 305 has a directed edge to Node 6.
+Node 310 has a directed edge to Node 6.
+Node 310 has a directed edge to Node 15.
+Node 310 has a directed edge to Node 311.
+Node 1060307 has a directed edge to Node 6.
+Node 1060307 has a directed edge to Node 1060308.
+Node 1060307 has a directed edge to Node 1087545.
